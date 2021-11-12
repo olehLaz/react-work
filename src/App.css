@@ -17,32 +17,6 @@
 
 }
 
-.header {
-  grid-area: h;
-  background-color: grey;
-  height: 83px;
-  padding: 5px;
-}
-.header img {
-  width: 60px;
-}
-
-.nav {
-  grid-area: n;
-  padding: 50px;
-}
-
-.content {
-  grid-area: c;
-  margin-top: 60px;
-  background-color: #d5ecef;
-  padding: 10px;
-}
-
-.content img {
-  width: 1150px;
-  height: 160px;
-}
 
 
 .footer {
