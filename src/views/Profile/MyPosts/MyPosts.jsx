@@ -4,17 +4,19 @@ import Post from "./Post/Post";
 
 const MyPosts = () => {
     return (
-        <div>
+        <div className={pr.postsBlock}>
             My Posts
-            <textarea></textarea>
+            <div>
+                <textarea></textarea>
+            </div>
             <button>Add Post</button>
             <div>
                 New post
             </div>
             <div className={pr.posts}>
-                <Post message='Hi, how a you?' />
-                <Post message='It s my first post' />
-                <Post message='It s trust post' />
+                <Post message='Hi, how a you?'/>
+                <Post message='It s my first post'/>
+                <Post message='It s trust post'/>
                 {/*<div className={pr.item}>post 2</div>
                     <div className={pr.item}>post 3</div>*/}
             </div>
