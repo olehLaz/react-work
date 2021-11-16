@@ -5,11 +5,13 @@
     margin-top: 30px;
     padding: 50px;
 }
-.item a {
+.item {
     text-decoration: none;
     color: #395163;
 }
 
-.item a.active {
-    color: #153d6c;
+.active {
+    text-decoration: none;
+    background-color: #395163;
+    color: #12ff9c;
 }

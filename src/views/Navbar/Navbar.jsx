@@ -7,13 +7,13 @@ const Navbar = () => {
         <nav className={cl.nav}>
             {/*<div className={`${cl.item} ${cl.active}`}>*/}
             <div className={cl.item}>
-                <NavLink to="/profile" activeClassName={cl.active} >Profile</NavLink>
+                <NavLink to="/profile" className = { navData => navData.isActive ? cl.active : cl.item } >Profile</NavLink>
             </div>
             <div className={cl.item}>
-                <NavLink to="/dialogs" activeClassName={cl.active} >Messages</NavLink>
+                <NavLink to="/dialogs" className = { navData => navData.isActive ? cl.active : cl.item } >Messages</NavLink>
             </div>
             <div className={cl.item}>
-                <NavLink to="/news" activeClassName={cl.active} >News</NavLink>
+                <NavLink to="/news" className = { navData => navData.isActive ? cl.active : cl.item } >News</NavLink>
             </div>
             <div className={cl.item}>
                 <NavLink to="/news">Settings</NavLink>
