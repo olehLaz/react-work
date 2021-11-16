@@ -5,10 +5,11 @@
     margin-top: 30px;
     padding: 50px;
 }
-.item {
-    color: #545d10;
+.item a {
+    text-decoration: none;
+    color: #395163;
 }
 
-.active {
-    color: #b46e7a;
+.item a.active {
+    color: #153d6c;
 }

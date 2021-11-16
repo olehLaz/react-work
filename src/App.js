@@ -7,6 +7,7 @@ import Profile from "./views/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import {Routes} from "react-router";
+import pr from "./components/Dialogs/Dialogs.module.css";
 
 //function App() {
 const App = () => {
@@ -15,10 +16,12 @@ const App = () => {
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
-                <Routes>
-                    <Route path="/dialogs" element={<Dialogs/>}/>
-                    <Route path="/profile" element={<Profile/>}/>
-                </Routes>
+                <div className='app-wrapper-content'>
+                    <Routes>
+                        <Route path='/dialogs' element={<Dialogs/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
+                    </Routes>
+                </div>
                 {/* <Profile />*/}
                 {/*<Dialogs />*/}
                 <Footer/>
