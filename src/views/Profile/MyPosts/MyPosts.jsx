@@ -10,6 +10,11 @@ let postData = [
 
 ]
 
+let postsElements = postData
+    .map( p =>
+        <Post message={p.message} likesCount={p.likesCount} />
+        );
+
 
 
 const MyPosts = () => {
@@ -25,9 +30,12 @@ const MyPosts = () => {
             </div>
             <div className={pr.posts}>
 
-                <Post message={postData[0].message} likesCount={postData[0].likesCount} />
+                { postsElements }
+
+                {/*<Post message={postData[0].message} likesCount={postData[0].likesCount} />
                 <Post message={postData[1].message} likesCount={postData[1].likesCount} />
                 <Post message={postData[2].message} likesCount={postData[2].likesCount} />
+                */}
 
                 {/*<Post message='Hi, how a you?'/>
                 <Post message='It s my first post'/>
