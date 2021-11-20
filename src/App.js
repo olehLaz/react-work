@@ -10,15 +10,7 @@ import {Routes} from "react-router";
 
 //function App() {
 const App = (props) => {
-
-    /*let postData = [
-        {id: 1, message: 'Hi, how a you?', likesCount: 12},
-        {id: 2, message: 'It s my first post', likesCount: 0},
-        {id: 3, message: 't s trust post', likesCount: 5},
-    ]
-*/
     return (
-
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
@@ -26,17 +18,13 @@ const App = (props) => {
                     <Routes>
                         <Route exact path='/dialogs' element={<Dialogs
                             state={props.state.dialogsPage}
-                            /*messagesData={props.state.messagesData}*/
                         />} />
                         <Route path='/profile' element={<Profile
-                            /*postData={props.state.postData}*/
                             state={props.state.profilePage}
-
+                            addPost={props.addPost}
                         />} />
                     </Routes>
                 </div>
-                {/* <Profile />*/}
-                {/*<Dialogs />*/}
                 <Footer/>
             </div>
     );

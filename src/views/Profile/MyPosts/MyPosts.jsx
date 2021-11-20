@@ -21,12 +21,13 @@ let postsElements = props.postData
     let newPostElement = React.createRef();
 
     let addPost = () => {
-
+        debugger;
         let text = newPostElement.current.value;
+        props.addPost(text);
 
         /*let text = document.getElementById('new-post').value;*/
         /*alert('ddddddddddddddd');*/
-        alert(text);
+        /*alert(text);*/
 
     }
 
