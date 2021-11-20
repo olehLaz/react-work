@@ -28,10 +28,14 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Routes>
                         <Route exact path='/dialogs' element={<Dialogs
-                            dialogsData={props.dialogsData}
-                            messagesData={props.messagesData}
+                            state={props.state.dialogsPage}
+                            /*messagesData={props.state.messagesData}*/
                         />} />
-                        <Route path='/profile' element={<Profile postData={props.postData} />} />
+                        <Route path='/profile' element={<Profile
+                            /*postData={props.state.postData}*/
+                            state={props.state.profilePage}
+
+                        />} />
                     </Routes>
                 </div>
                 {/* <Profile />*/}
