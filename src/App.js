@@ -5,9 +5,8 @@ import Footer from "./views/Footer/Footer";
 import Navbar from "./views/Navbar/Navbar";
 import Profile from "./views/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import {Routes} from "react-router";
-import pr from "./components/Dialogs/Dialogs.module.css";
 
 //function App() {
 const App = (props) => {
@@ -18,10 +17,8 @@ const App = (props) => {
         {id: 3, message: 't s trust post', likesCount: 5},
     ]
 */
-
-
     return (
-        <BrowserRouter>
+
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
@@ -42,7 +39,6 @@ const App = (props) => {
                 {/*<Dialogs />*/}
                 <Footer/>
             </div>
-        </BrowserRouter>
     );
 }
 
