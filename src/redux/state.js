@@ -1,4 +1,8 @@
-import {rerenderEntireTree} from "../render";
+//import {rerenderEntireTree} from "../render";
+
+let rerenderEntireTree = () => {
+    console.log('state was changed')
+}
 
 let state = {
 
@@ -28,8 +32,7 @@ let state = {
     }
 }
 
-//export let addPost = (postMessage) => {
-export let addPost = () => {
+export const addPost = () => {
     //  debugger;
     let newPost = {
         id: 5,
@@ -41,10 +44,15 @@ export let addPost = () => {
 }
 
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
 
     state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
+}
+
+//observer - наблюдатель (функция которую мы отдаём.
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 
