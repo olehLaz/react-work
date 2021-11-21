@@ -8,6 +8,7 @@ let state = {
             {id: 2, message: 'It s my first post', likesCount: 0},
             {id: 3, message: 't s trust post', likesCount: 5},
         ],
+        newPostText: 'value-fixed'
     },
     dialogsPage: {
         dialogsData: [
@@ -27,15 +28,26 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
-    debugger;
+//export let addPost = (postMessage) => {
+export let addPost = () => {
+    //  debugger;
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0
     };
     state.profilePage.postData.push(newPost);
     rerenderEntireTree(state);
 }
+
+
+export let updateNewPostText = (newText) => {
+
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+
+window.state = state;
 
 export default state;

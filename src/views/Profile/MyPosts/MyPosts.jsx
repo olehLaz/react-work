@@ -12,19 +12,36 @@ let postsElements = props.postData
 
     let addPost = () => {
        // debugger;
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value='';
+        //учитывая что дынные сидят в state мы
+        // можем их брать от туда
+        //нет смысла отправлять этот текст
+       // let text = newPostElement.current.value;
+        // props.addPost(text);
+        props.addPost();
+        /*newPostElement.current.value='';*/
         /*let text = document.getElementById('new-post').value;*/
         /*alert('ddddddddddddddd');*/
         /*alert(text);*/
+        props.updateNewPostText('');
     }
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        /*console.log(text);*/
+        props.updateNewPostText(text);
+    }
+
     return (
         <div className={pr.postsBlock}>
             My Posts
             <div>
                 {/*<textarea id='new-post'></textarea>*/}
-                <textarea ref={ newPostElement } ></textarea>
+                <textarea
+                    onChange={onPostChange}
+                    ref={ newPostElement }
+                    /*value="value-passing"*/
+                    value={ props.newPostText }
+                />
             </div>
             <button onClick={ addPost }>Add Post</button>
             <div>
