@@ -22,7 +22,7 @@ let postsElements = props.postData
         /*let text = document.getElementById('new-post').value;*/
         /*alert('ddddddddddddddd');*/
         /*alert(text);*/
-        props.updateNewPostText('');
+
     }
 
     let onPostChange = () => {
